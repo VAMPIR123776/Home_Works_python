@@ -1,0 +1,45 @@
+a = 15 * 3
+b = 15 / 3
+c = 15 // 2
+d = 15 ** 2
+
+print(type(a))
+print(type(b))
+print(type(c))
+print(type(d))
+
+
+weather = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
+weather.insert(8, '"+05"')
+weather.insert(1, '"05"')
+weather.insert(4, '"17"')
+
+weather.remove('5')
+weather.remove('+5')
+weather.remove('17')
+print(' '.join(weather))
+
+
+list_str = ['инженер-конструктор Игорь', 'главный бухгалтер МАРИНА', 'токарь высшего разряда нИКОЛАй',
+            'директор аэлита']
+
+for x in list_str:      
+    print(f" 'Привет, {x.split()[-1].title()}!'")
+
+
+prices = [57.8, 46.51, 97, 37.55, 1, 5.42, 1000, 150.99, 60.21, 2.5]
+prices.sort()
+for price in prices:
+    rubles = int(price)     
+    pennies = (price - int(price)) * 100        
+    print(f'{rubles} руб. {pennies:02.0f} коп.')
+
+
+prices = [57.8, 46.51, 97, 37.55, 1, 5.42, 1000, 150.99, 60.21, 2.5]
+prices.sort(reverse=True)
+prices = prices[0:5]
+prices.sort()
+for price in prices:
+    rubles = int(price)
+    pennies = (price - int(price)) * 100
+    print(f'{rubles} руб. {pennies:02.0f} коп.')

@@ -1,0 +1,68 @@
+# 1
+
+sec = int(input('Введите количество секунд: '))
+
+day = sec // 86400
+sec = sec % 86400
+hour = sec // 3600
+sec = sec % 3600
+min = sec // 60
+sec = sec % 60
+
+if day > 0:
+    print(day, "д.", hour, "час", min , "мин.", sec, "сек.")
+elif hour > 0:
+    print(hour, "час", min , "мин.", sec, "сек.")
+elif min > 0:
+    print(min , "мин.", sec, "сек.")
+elif sec > 0:
+    print(sec, "сек.")
+
+# 2
+
+x = [x**3 for x in range(1, 1000, 2)]
+print(x)
+
+# a
+
+sum = 0
+for result in x:
+    if result % 7 == 0:
+        sum += result
+
+print(sum)
+
+# b
+# Вроде правильно, но не уверен
+
+i = 17
+
+for idx in range(len(x)):
+    x[idx] += i
+
+print(x)
+
+sum = 0
+
+for result in x:
+    if result % 7 == 0:
+        sum += result
+
+print(sum)
+
+# 3
+
+x = [x for x in range(1, 101)]             
+
+exception = {11, 12, 13, 14}   
+
+exit_result = 0
+for exit_result in x:
+    if exit_result in exception:           
+        print(exit_result, "процентов")
+    elif exit_result % 10 == 1:                 
+        print(exit_result, "процент")
+    elif exit_result % 10 >= 2 and exit_result % 10 <= 4:   
+        print(exit_result, "процента")
+    else:                                       
+        print(exit_result, "процентов")
